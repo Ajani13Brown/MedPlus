@@ -1,0 +1,12 @@
+.nav-Container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items vertically center */
+    padding: 0 20px; /* Optional padding for better spacing */
+    width: 100%; /* Ensure the container takes up the full width */
+}
+
+.nav-Container img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
