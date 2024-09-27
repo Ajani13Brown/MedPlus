@@ -1,3 +1,5 @@
+/* ---------------------------------------------- Global Styles / Used Across Multiple Pages ----------------------------------- */
+
 .img-button:hover {
   transform: scale(1.05); /* Slightly increase the size of the image on hover */
 }
@@ -6,113 +8,198 @@
   transform: scale(0.90);
 }
 
-.qr-subtext{
+.navContainer, .qrnavContainer {
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Align items vertically center */
+  padding: 0 20px; /* Optional padding for better spacing */
+}
+
+.container img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px; /* Spacing above the title */
+}
+
+.bubble {
+  box-shadow: 0 0 0;
+  padding: 5px;
+  background-color: #F3F8FF;
+}
+
+.submit {
+  display: block; /* Make the button a block-level element */
+  width: 200px; /* Adjust the width as needed */
+  margin: 20px auto; /* Center the button horizontally and add vertical spacing */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.label, .text-muted {
+  font-family: 'Lora';
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.label {
+  color: #3D3D3D;
+  font-size: 18px;
+}
+
+.text-muted {
+  color: #888993;
+  font-size: 12px;
+}
+
+.Container {
+  padding: 20px 10px;
+}
+
+.ProgressContainer {
+  padding: 0 10px;
+}
+
+@media (min-width: 1024px) {
+  .Container {
+    padding: 20px 10vh; /* More padding on larger screens */
+  }
+}
+
+
+/* ---------------------------------------------- Profile Page ------------------------------------------------------ */
+
+.profile-container {
+  display: flex;
+  justify-content: flex-end; /* Align everything to the right */
+  align-items: center; /* Vertically center the text and image */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.Profile-pic {
+  width: 120px; /* Profile picture size */
+  height: 120px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure image covers entire area */
+  margin-left: 20px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column; /* Stack title and age vertically */
+  align-items: center;
+  margin-right: 10px; /* Prevent the text from touching the right edge of the page */
+}
+
+.connor-g {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  padding-bottom: 5px;
+  text-align: right;
+}
+
+.age {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #424242;
+  margin: 5px 0 0 0;
+  text-align: right;
+}
+
+.notification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%; /* Optional: add spacing */
+}
+
+.upcoming-container {
+  display: flex;
+  justify-content: space-between; /* Align title and button on opposite sides */
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+/* ---------------------------------------------- QR Scan Page ------------------------------------------------------ */
+
+.qr-subtext {
   color: #888993;
   font-family: Lora;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-    }
-
-    .qrscan-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh; /* Ensures the container takes up the full viewport height */
-      padding: 20px; /* Provides spacing around the container */
-      box-sizing: border-box; /* Includes padding in the element's total width and height */
-  }
-  
-  .scannerBackground {
-      width: 80%; /* Responsive width */
-      max-width: 300px; /* Maximum width for larger screens */
-      height: auto; /* Maintain aspect ratio */
-      background: linear-gradient(180deg, rgba(197, 195, 195, 0.6) 0%, rgba(115, 114, 114, 0.468) 39.5%, rgba(63, 62, 62, 0.101) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px; /* Padding inside the background */
-      box-sizing: border-box; /* Includes padding in the element's total width and height */
-      border-radius: 8px; /* Optional: Add rounded corners */
-  }
-  
-  .scanner {
-      max-width: 100%; /* Ensure the image scales down if necessary */
-      height: auto; /* Maintain aspect ratio */
-  }
-  
-  .navContainer {
-    display: flex;
-    justify-content: space-between; /* Distribute space between items */
-    align-items: center; /* Align items vertically center */
-    padding: 0 20px; /* Optional padding for better spacing */
-  }
-  
-  .container img {
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-  }
-  
-  .title {
-    text-align: center;
-    margin-top: 20px; /* Spacing above the title */
-  }
-
-  .bubble{
-    box-shadow: 0 0 0;
-    padding: 5px;
-    background-color: #F3F8FF;
-  }
-
-  .submit {
-    display: block; /* Make the button a block-level element to use margin auto for centering */
-    width: 200px; /* Adjust the width as needed */
-    margin: 20px auto; /* Center the button horizontally and add vertical spacing */
-    font-size: 16px; /* Adjust font size as needed */
-  }
-
-  .label {
-color: '#3D3D3D';;
- font-size: 18;
- font-family: 'Lora';
- font-weight: 500;
- word-wrap: 'break-word'
-  }
-
-  .text-muted{
-color:'#888993';
- font-size: 12;
- font-family: 'Lora';
- font-weight: '400';
- word-wrap: 'break-word'
-  }
-
-  .nav {
-    display: flex; 
-    justify-content: flex-end; /* Aligns the content to the right within its parent */
-    padding: 10px; /* Optional: Add some padding */
 }
 
-.qrnavContainer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* Align children to the right */
-    
+.qrscan-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+.scannerBackground {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  background: linear-gradient(180deg, rgba(197, 195, 195, 0.6) 0%, rgba(115, 114, 114, 0.468) 39.5%, rgba(63, 62, 62, 0.101) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.scanner {
+  max-width: 100%;
+  height: auto;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 100% 200%;
+  animation: scan 1.5s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes scan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* ---------------------------------------------- Medication Page ------------------------------------------------------ */
 
 .med {
   background-color: #F3F8FF;
-  display: flex; /* Use flexbox layout */
-  align-items: center; /* Vertically center items */
-  padding: 20px; /* Add padding inside the .med div */
-  gap: 20px; /* Add space between the image and the content */
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
 }
 
 .med > img {
   width: 121px;
   height: 121px;
-  flex-shrink: 0;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -122,31 +209,123 @@ color:'#888993';
 }
 
 .med > h1 {
-  overflow: hidden;
   color: #1D1B20;
-  text-overflow: ellipsis;
   font-family: Lora;
   font-size: 21.307px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 28.409px;
-  letter-spacing: var(--Headline-Small-Tracking, 0px);
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .med > p {
-  overflow: hidden;
-  color: var(--Schemes-On-Surface-Variant, #49454F);
-  text-overflow: ellipsis;
+  color: #49454F;
   font-family: Lora;
   font-size: 14.204px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 21.307px;
-  letter-spacing: 0.133px;
-  margin: 10px 0 0 0; /* Add margin to top to separate from the title */
+  margin: 10px 0 0 0;
 }
 
 .med > Button {
-  margin-top: 10px; /* Add space above the button */
+  margin-top: 10px;
+}
+
+/* ---------------------------------------------- Perscription Page ------------------------------------------------------ */
+
+.RXbubble {
+  box-shadow: 0 0 0;
+  padding: 5px;
+  background-color: #E4E4E4;
+}
+
+.medpic {
+  width: 100%;
+position: relative;
+max-width: 100%;
+overflow: hidden;
+height: 10.438rem;
+object-fit: cover;
+}
+
+.amitriptyline-10mg {
+  width: 218px;
+  position: relative;
+  font-size: 24px;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: Lora;
+  color: #3d3d3d;
+  text-align: left;
+  display: inline-block;
+}
+
+.tabs {
+  width: 3.063rem;
+  position: relative;
+  font-size: 0.875rem;
+  letter-spacing: 0.1px;
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-family: Lora;
+  color: #888993;
+  text-align: left;
+  display: inline-block;
+}
+
+
+.reminder-toggle {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background-color: #16215b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.415rem 0.75rem;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 2rem;
+  color: #fff;
+  font-family: Lora;
+  margin-bottom: 1.75rem; /* Add margin-bottom to create space between elements */
+}
+
+.reminder-Container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reminder-toggle .switch .form-check-label {
+  font-size: 0.875rem; /* Smaller font size for the label */
+  color: #fff; /* Keep the label color white to match the design */
+  margin-left: 0.5rem; /* Optional: Add some margin to space it nicely */
+}
+
+  
+
+
+/* ---------------------------------------------- Miscellaneous ------------------------------------------------------ */
+
+.fade-transition {
+  position: relative;
+  overflow: hidden;
+}
+
+.fade-transition .fade-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+  z-index: 2;
+}
+
+.fade-transition.fade-out .fade-overlay {
+  opacity: 1;
 }

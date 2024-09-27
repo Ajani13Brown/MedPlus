@@ -4,19 +4,21 @@ import Bookmark from '../assets/bookmark.png'
 import Button from 'react-bootstrap/esm/Button'
 import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/esm/Container';
+import { useNavigate } from 'react-router-dom';
+import Med from '../assets/amitriptyline.png'
 
 
 const Medinfo = () => {
-  const hello = "The Med"
+  const navigate = useNavigate()
   return (
-    <div style={{ backgroundColor:'#7BA7FC', minHeight: '100vh' }}>
+    <div style={{  backgroundColor: '#7BA7FC', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
     <div className='navContainer mt-4'>
         <img className="img-button" src={Arrow} alt="Arrow Button" onClick={()=>{navigate("/")}}/>
         <img className="image-button"src={Bookmark} alt="bookmark" onClick={()=>{navigate("/")}}/>
         </div>
 
         <div className="med">
-        <img className="medpic" src="https://s3-alpha-sig.figma.com/img/dff9/0979/7d54618b3083b745b5dcab6a31fc4203?Expires=1727049600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cBYnQO3wwg71r6gUMM-mX2NwzFYpu~UQTi9DuZY905q9MvTt7cDrImSW8gbP0bbn49cGS8zWO-48s07Ee~xZZyAID1M88lF0SSWaua3GK2yMqDaIA85alB6AOMg5XGVp7fkAlCFC7~yAt-PHG5Ig1og~Y42yJGp0hNeqmibHKNN5I~z-jfk5QM~ex2reU8RH1AGkxSt1X8ZyAbIamQTDVEv3BPEetCZzSlfsoAeKSy9EUnRixI~qQ-3xl9yN5uGhRApZ5Ds-J1TbRsdCwoFcn012KLGa6SwGcNNoVpftA~YadcjZIEOqNlI1i9OcpzSjpInPvgw28aMn88ePaW0PnA__" alt="Medication" />
+        <img className="medpic" src={Med} alt="Medication" />
         <div>
           <h1 className="med/name">Amitiptyline</h1>
           <p>Tablets - 10mg</p>
@@ -31,13 +33,7 @@ const Medinfo = () => {
       <Accordion.Item eventKey="1">
         <Accordion.Header>Medication Purpose</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Amitriptyline is prescribed for the treatment of chronic depression and to help manage generalized anxiety disorder. It is also indicated for the relief of chronic pain, particularly in patients suffering from migraines and neuropathic pain.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
@@ -46,13 +42,7 @@ const Medinfo = () => {
       <Accordion.Item eventKey="1">
         <Accordion.Header>Dosage & Administration</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        The prescribed dosage is 1 tablet (25 mg) taken twice a day—once in the morning after breakfast and once at bedtime. It is important to take the medication after meals to reduce the risk of stomach upset. Follow your healthcare provider’s instructions for any adjustments to this regimen.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
@@ -61,13 +51,8 @@ const Medinfo = () => {
       <Accordion.Item eventKey="1">
         <Accordion.Header>Side Effects</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Common side effects include drowsiness, dry mouth, dizziness, blurred vision, constipation, and weight gain. If you experience severe side effects such as chest pain, rapid heart rate, or any signs of an allergic reaction (like rash, itching, or swelling), seek medical attention promptly.
+
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
@@ -76,13 +61,7 @@ const Medinfo = () => {
       <Accordion.Item eventKey="1">
         <Accordion.Header>Interactions</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Inform your healthcare provider about all medications you are currently taking, including over-the-counter drugs and supplements. Amitriptyline may interact with other antidepressants, blood thinners, and medications for heart conditions, potentially leading to serious side effects.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
@@ -91,13 +70,7 @@ const Medinfo = () => {
       <Accordion.Item eventKey="1">
         <Accordion.Header>Precautions & Warnings</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Use caution when operating heavy machinery or driving, as Amitriptyline can cause drowsiness. Avoid alcohol, which can increase sedation and other side effects. This medication is not recommended for individuals with a history of heart problems or those who are pregnant or breastfeeding without consulting a healthcare provider.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
@@ -106,13 +79,8 @@ const Medinfo = () => {
       <Accordion.Item eventKey="1">
         <Accordion.Header>Storage</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Store Amitriptyline at room temperature, away from moisture and heat. Keep the medication in its original container and out of reach of children and pets to prevent accidental ingestion.
+
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
@@ -121,13 +89,7 @@ const Medinfo = () => {
       <Accordion.Item eventKey="1">
         <Accordion.Header>Overdose Information</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        In case of overdose, seek immediate medical attention or contact a poison control center. Symptoms of overdose may include severe drowsiness, confusion, rapid heartbeat, and in severe cases, coma. Do not attempt to treat an overdose at home.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>

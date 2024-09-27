@@ -1,5 +1,5 @@
 import React from 'react';
-// import Button from '../components/button';
+import Button from '../components/button';
 import logo from '../assets/logo.png';
 import doctorImage from '../assets/doctor.png';
 import {
@@ -27,8 +27,8 @@ const navigate = useNavigate()
         <Image src={doctorImage} alt="Doctor" />
       </ImageWrapper>
       <ButtonGroup>
-          {/* <Button>Log In</Button> */}
-          {/* <Button onClick={()=>{navigate("/onboarding")}}>Register</Button> */}
+          <Button onClick={()=>{navigate("/login")}} >Log In</Button>
+          <Button onClick={()=>{navigate("/onboarding")}}>Register</Button>
         </ButtonGroup>
     </Container>
   );
