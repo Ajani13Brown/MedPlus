@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
 const Login = () => {
-  // State variables for form fields and feedback
+  // State variables using Feedback from forms and error an sucess states for error handling
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
-  // Handle form submission
+  // Handle form submission for form runs login function
   const handleSubmit = async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
+    // used to clear any previous error or success messages before handling the new form submission.
     setError(null); 
     setSuccess(null); 
 
-    // Call loginUser with current form values
+    // Call loginUser with current form values set by form
     await loginUser(username, password);
   };
 
@@ -32,6 +33,7 @@ const Login = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          // converts a JavaScript object into a JSON-formatted string.
           username,
           password,
         }),
@@ -39,6 +41,7 @@ const Login = () => {
       
       if (response.ok) {
         const data = await response.json();
+        // the first variable in localStorage.setItem() set the key name this can be anything but using "token" for JWT token.
         localStorage.setItem("token", data.token);
         setSuccess("Login successful!");
         console.log("Login successful");
@@ -63,8 +66,8 @@ const Login = () => {
           <Form.Control
             type="text"
             placeholder="Enter Username"
-            value={username} // Update username state
-            onChange={(e) => setUsername(e.target.value)}
+            value={username} 
+            onChange={(e) => setUsername(e.target.value)} // Update username state using e for event
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -73,7 +76,7 @@ const Login = () => {
             type="password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)} // Update password state
           />
         </Form.Group>
         <Button variant="primary" type="submit">

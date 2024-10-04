@@ -10,12 +10,18 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 const OnBoarding2 = () => {
     const navigate = useNavigate();
+    // useLocation is being used to access the state passed from the previous page
+    // retrieves the userType value that was passed in the state of the location object when navigating from OnBoarding1 to OnBoarding2.
     const location = useLocation(); 
     const userType = location.state?.userType;
 
     // changes labels base on state passed to component from OnBoarding1
+    // 
     const getLabelText = () => {
+        // switch statement in your function works similarly to an if-else if chain
+        // designed for situations where you are comparing the same variable (in this case, userType) to multiple possible values.
         switch (userType) {
+            // Each "case" is a possible value that userType might have
             case 'Child':
                 return "Child's Name";
             case 'myself':
@@ -47,7 +53,7 @@ const OnBoarding2 = () => {
                 <Form>
                     <div className="bubble mt-3">
                         <Form.Group className="mb-3" controlId="Username">
-                            <Form.Label>{getLabelText()}</Form.Label>
+                            <Form.Label>{getLabelText()}</Form.Label> {/* getLabelText is called here to generate label base on user type */}
                             <Form.Control className="label" type="text" placeholder="Connor Gallagher" />
                         </Form.Group>
                     </div>

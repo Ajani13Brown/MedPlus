@@ -8,6 +8,8 @@ export const RemindersProvider = ({ children }) => {
   const [reminders, setReminders] = useState(() => {
     const savedReminders = localStorage.getItem('reminders');
     return savedReminders
+    // Conditional statment that checks for saved data inside of local storage otherwise sets reminders to default value of false
+    // "?" for if and JSON.parse is converting the JSON data in Local Storge to string so it can be used.
       ? JSON.parse(savedReminders)
       : {
           Reminder1: { Active: false },

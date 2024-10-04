@@ -1,13 +1,15 @@
 /* ---------------------------------------------- Global Styles / Used Across Multiple Pages ----------------------------------- */
 
+/* Styles for image buttons, applies to any image with the .img-button class */
 .img-button:hover {
   transform: scale(1.05); /* Slightly increase the size of the image on hover */
 }
 
 .img-button:active {
-  transform: scale(0.90); /* Increase size of button when clicked */
+  transform: scale(0.90); /* Decrease size of button when clicked */
 }
 
+/* Styles for navigation containers across pages */
 .navContainer, .qrnavContainer {
   display: flex;
   justify-content: space-between; /* Distribute space between items */
@@ -15,22 +17,26 @@
   padding: 0 20px; /* Optional padding for better spacing */
 }
 
+/* Styles for container images (e.g., logos, icons) */
 .container img {
   width: 50px; /* Adjust size as needed */
   height: auto;
 }
 
+/* Styles for general page titles */
 .title {
   text-align: center;
   margin-top: 20px; /* Spacing above the title */
 }
 
+/* Styles for bubble elements (e.g., notifications or input boxes) */
 .bubble {
   box-shadow: 0 0 0;
   padding: 5px;
   background-color: #F3F8FF;
 }
 
+/* Styles for form submission buttons */
 .submit {
   display: block; /* Make the button a block-level element */
   width: 200px; /* Adjust the width as needed */
@@ -38,39 +44,45 @@
   font-size: 16px; /* Adjust font size as needed */
 }
 
+/* General styles for labels and text-muted elements */
 .label, .text-muted {
   font-family: 'Lora';
   font-weight: 500;
   word-wrap: break-word;
 }
 
+/* Label styles, used in forms or profile sections */
 .label {
   color: #3D3D3D;
   font-size: 18px;
 }
 
+/* Muted text styles (e.g., secondary information or hints) */
 .text-muted {
   color: #888993;
   font-size: 12px;
 }
 
+/* Styles for generic containers used in multiple pages */
 .Container {
   padding: 20px 10px;
 }
 
+/* Specific padding styles for progress containers */
 .ProgressContainer {
   padding: 0 10px;
 }
 
+/* Responsive styling for containers on larger screens */
 @media (min-width: 1024px) {
   .Container {
     padding: 20px 10vh; /* More padding on larger screens */
   }
 }
 
-
 /* ---------------------------------------------- Profile Page ------------------------------------------------------ */
 
+/* Container for profile page layout */
 .profile-container {
   display: flex;
   justify-content: flex-end; /* Align everything to the right */
@@ -80,6 +92,7 @@
   box-sizing: border-box; /* Include padding in width calculations */
 }
 
+/* Styles for the profile picture on the profile page */
 .Profile-pic {
   width: 120px; /* Profile picture size */
   height: 120px;
@@ -88,6 +101,7 @@
   margin-left: 20px;
 }
 
+/* Styles for the profile details (e.g., name, age) */
 .profile-details {
   display: flex;
   flex-direction: column; /* Stack title and age vertically */
@@ -95,6 +109,7 @@
   margin-right: 10px; /* Prevent the text from touching the right edge of the page */
 }
 
+/* Styles for the name (e.g., Connor Gallagher) on the profile page */
 .connor-g {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.25rem;
@@ -105,6 +120,7 @@
   text-align: right;
 }
 
+/* Styles for the age label on the profile page */
 .age {
   font-family: 'Lora', serif;
   font-size: 14px;
@@ -114,6 +130,7 @@
   text-align: right;
 }
 
+/* Notification container on the profile page */
 .notification-container {
   display: flex;
   justify-content: center;
@@ -121,6 +138,7 @@
   margin-top: 10%; /* Optional: add spacing */
 }
 
+/* Container for upcoming events or tasks on the profile page */
 .upcoming-container {
   display: flex;
   justify-content: space-between; /* Align title and button on opposite sides */
@@ -131,6 +149,7 @@
 
 /* ---------------------------------------------- QR Scan Page ------------------------------------------------------ */
 
+/* Subtext for QR scan instructions */
 .qr-subtext {
   color: #888993;
   font-family: Lora;
@@ -138,6 +157,7 @@
   font-weight: 400;
 }
 
+/* Container for the QR scan page layout */
 .qrscan-container {
   display: flex;
   flex-direction: column;
@@ -147,6 +167,7 @@
   box-sizing: border-box;
 }
 
+/* Background for the QR scanner */
 .scannerBackground {
   width: 80%;
   max-width: 300px;
@@ -160,11 +181,13 @@
   border-radius: 8px;
 }
 
+/* Styles for the scanner image */
 .scanner {
   max-width: 100%;
   height: auto;
 }
 
+/* Overlay for the QR scanner animation */
 .scanner-overlay {
   position: absolute;
   top: 0;
@@ -178,6 +201,7 @@
   z-index: 2;
 }
 
+/* Animation keyframes for the scan overlay */
 @keyframes scan {
   0% {
     background-position: 0% 0%;
@@ -189,6 +213,7 @@
 
 /* ---------------------------------------------- Medication Page ------------------------------------------------------ */
 
+/* Container for each medication item */
 .med {
   background-color: #F3F8FF;
   display: flex;
@@ -197,6 +222,7 @@
   gap: 20px;
 }
 
+/* Styles for the medication image */
 .med > img {
   width: 121px;
   height: 121px;
@@ -204,10 +230,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Container for medication text and details */
 .med > div {
   flex: 1; /* Allow this div to grow and take available space */
 }
 
+/* Styles for the medication name (e.g., Amitriptyline 10mg) */
 .med > h1 {
   color: #1D1B20;
   font-family: Lora;
@@ -216,6 +244,7 @@
   margin: 0;
 }
 
+/* Styles for the medication description */
 .med > p {
   color: #49454F;
   font-family: Lora;
@@ -224,27 +253,31 @@
   margin: 10px 0 0 0;
 }
 
+/* Button styles within the medication container */
 .med > Button {
   margin-top: 10px;
 }
 
-/* ---------------------------------------------- Perscription Page ------------------------------------------------------ */
+/* ---------------------------------------------- Prescription Page ------------------------------------------------------ */
 
+/* Bubble style for each prescription container */
 .RXbubble {
   box-shadow: 0 0 0;
   padding: 5px;
   background-color: #E4E4E4;
 }
 
+/* Image styling for prescription medication pictures */
 .medpic {
   width: 100%;
-position: relative;
-max-width: 100%;
-overflow: hidden;
-height: 10.438rem;
-object-fit: cover;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 10.438rem;
+  object-fit: cover;
 }
 
+/* Styles for medication name (Amitriptyline 10mg) */
 .amitriptyline-10mg {
   width: 218px;
   position: relative;
@@ -258,6 +291,7 @@ object-fit: cover;
   display: inline-block;
 }
 
+/* Styles for tab/capsule dosage display */
 .tabs {
   width: 3.063rem;
   position: relative;
@@ -271,61 +305,12 @@ object-fit: cover;
   display: inline-block;
 }
 
-
+/* Container for reminder toggles */
 .reminder-toggle {
   width: 100%;
-  max-width: 400px;
-  position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
-  background-color: #16215b;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between; /* Align the toggles and labels to opposite sides */
   align-items: center;
-  justify-content: space-between;
-  padding: 0.415rem 0.75rem;
+  padding: 0 20px;
   box-sizing: border-box;
-  text-align: left;
-  font-size: 2rem;
-  color: #fff;
-  font-family: Lora;
-  margin-bottom: 1.75rem; /* Add margin-bottom to create space between elements */
-}
-
-.reminder-Container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.reminder-toggle .switch .form-check-label {
-  font-size: 0.875rem; /* Smaller font size for the label */
-  color: #fff; /* Keep the label color white to match the design */
-  margin-left: 0.5rem; /* Optional: Add some margin to space it nicely */
-}
-
-  
-
-
-/* ---------------------------------------------- Miscellaneous ------------------------------------------------------ */
-
-.fade-transition {
-  position: relative;
-  overflow: hidden;
-}
-
-.fade-transition .fade-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  transition: opacity 0.5s ease-out;
-  opacity: 0;
-  z-index: 2;
-}
-
-.fade-transition.fade-out .fade-overlay {
-  opacity: 1;
 }
