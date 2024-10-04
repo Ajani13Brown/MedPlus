@@ -13,7 +13,7 @@ const OnBoarding2 = () => {
     const location = useLocation(); 
     const userType = location.state?.userType;
 
-    // Dynamic name labels
+    // changes labels base on state passed to component from OnBoarding1
     const getLabelText = () => {
         switch (userType) {
             case 'Child':

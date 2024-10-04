@@ -26,7 +26,9 @@ const Profile = () => {
         <Button className="add-med-button" variant="dark" onClick={() => { navigate("/qr-code") }}>+ Add Medication</Button>
       </div>
 
-      {/* Conditionally render the notification card if Reminder is active */}
+      {/* render the notification card base or reminder state if reminder is active will render notification */}
+      {/* 2 conditions anre being checked if reminders1 isActive  first condition true then checks  if there is jsx content */}
+      
       {reminders.Reminder1.Active && ( /*checks if both values are true */
         <div className="notification-container">
           <Card className="med-notification" style={{ width: '70%', height: '45%' }}>

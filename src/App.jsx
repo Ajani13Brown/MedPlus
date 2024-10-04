@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -11,11 +11,11 @@ import './App.css';
 import Login from './pages/Login';
 import Loading from './pages/Loading';
 import Prescription from './pages/Prescription';
-import { RemindersProvider } from './Context/RemindersContext'; // Updated import
+import { RemindersProvider } from './Context/RemindersContext';
 
 function App() {
   return (
-    <RemindersProvider> {/* Wrap with RemindersProvider */}
+    <RemindersProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

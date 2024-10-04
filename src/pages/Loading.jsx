@@ -11,7 +11,7 @@ const Loading = () => {
   useEffect(() => {
     const fadeTimeout = setTimeout(() => {
       setFade(true); // Trigger fade-out transition
-    }, 2000); // 2 seconds delay
+    }, 2000); //  Control transition delay
 
     // Navigate to the prescription page after the fade effect completes
     const navigateTimeout = setTimeout(() => {
